@@ -1,0 +1,808 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "Microsoft.AnalysisServices.AdomdClient/19.84.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.56.0",
+          "Microsoft.Identity.Client.Broker": "4.56.0"
+        },
+        "compile": {
+          "lib/net472/Microsoft.AnalysisServices.AdomdClient.dll": {
+            "related": ".xml"
+          },
+          "lib/net472/Microsoft.AnalysisServices.SPClient.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net472/Microsoft.AnalysisServices.AdomdClient.dll": {
+            "related": ".xml"
+          },
+          "lib/net472/Microsoft.AnalysisServices.SPClient.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net472/ar/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ar"
+          },
+          "lib/net472/bg/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "bg"
+          },
+          "lib/net472/ca/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/net472/cs/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net472/da/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "da"
+          },
+          "lib/net472/de/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net472/el/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "el"
+          },
+          "lib/net472/es/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net472/et/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "et"
+          },
+          "lib/net472/eu/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "eu"
+          },
+          "lib/net472/fi/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net472/fr/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net472/gl/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "gl"
+          },
+          "lib/net472/he/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "he"
+          },
+          "lib/net472/hi/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "hi"
+          },
+          "lib/net472/hr/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "hr"
+          },
+          "lib/net472/hu/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net472/id/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "id"
+          },
+          "lib/net472/it/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net472/ja/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net472/kk/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "kk"
+          },
+          "lib/net472/ko/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net472/lt/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "lt"
+          },
+          "lib/net472/lv/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "lv"
+          },
+          "lib/net472/ms/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ms"
+          },
+          "lib/net472/nl/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/net472/no/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "no"
+          },
+          "lib/net472/pl/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net472/pt-PT/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/net472/pt/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net472/ro/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net472/ru/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net472/sk/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "sk"
+          },
+          "lib/net472/sl/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "sl"
+          },
+          "lib/net472/sr-Cyrl/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "sr-Cyrl"
+          },
+          "lib/net472/sr-Latn/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "sr-Latn"
+          },
+          "lib/net472/sv/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net472/th/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "th"
+          },
+          "lib/net472/tr/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net472/uk/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "uk"
+          },
+          "lib/net472/vi/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "vi"
+          },
+          "lib/net472/zh-Hans/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net472/zh-Hant/Microsoft.AnalysisServices.AdomdClient.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "build": {
+          "build/net472/Microsoft.AnalysisServices.AdomdClient.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/msasxpress.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "Microsoft.Identity.Client/4.56.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.22.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Drawing",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Windows.Forms",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Identity.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Identity.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Identity.Client.Broker/4.56.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Identity.Client": "4.56.0",
+          "Microsoft.Identity.Client.NativeInterop": "0.13.8"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Identity.Client.Broker.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Identity.Client.Broker.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Identity.Client.NativeInterop/0.13.8": {
+        "type": "package",
+        "compile": {
+          "lib/net461/Microsoft.Identity.Client.NativeInterop.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Identity.Client.NativeInterop.dll": {}
+        },
+        "build": {
+          "buildtransitive/net461/Microsoft.Identity.Client.NativeInterop.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/msalruntime_arm64.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/msalruntime.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/msalruntime_x86.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/6.22.0": {
+        "type": "package",
+        "compile": {
+          "lib/net472/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net472/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AnalysisServices.AdomdClient/19.84.1": {
+      "sha512": "oTNXKDM4W6ON888N0oejnBbSlGNlzMsnJm0eW4KWYzfM0YhicWBdqGiVWYqku7tBP28BnZhkgBL5pc6WnH+8AQ==",
+      "type": "package",
+      "path": "microsoft.analysisservices.adomdclient/19.84.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/Microsoft.AnalysisServices.AdomdClient.targets",
+        "build/net472/Microsoft.AnalysisServices.AdomdClient.targets",
+        "lib/net45/Microsoft.AnalysisServices.AdomdClient.dll",
+        "lib/net45/Microsoft.AnalysisServices.AdomdClient.xml",
+        "lib/net45/Microsoft.AnalysisServices.SPClient.Interfaces.dll",
+        "lib/net45/Microsoft.AnalysisServices.SPClient.Interfaces.xml",
+        "lib/net45/ar/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/bg/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/ca/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/cs/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/da/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/de/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/el/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/es/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/et/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/eu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/fi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/fr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/gl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/he/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/hi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/hr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/hu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/id/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/it/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/ja/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/kk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/ko/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/lt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/lv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/ms/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/nl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/no/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/pl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/pt-PT/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/pt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/ro/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/ru/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/sk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/sl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/sr-Cyrl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/sr-Latn/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/sv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/th/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/tr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/uk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/vi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/zh-Hans/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net45/zh-Hant/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/Microsoft.AnalysisServices.AdomdClient.dll",
+        "lib/net472/Microsoft.AnalysisServices.AdomdClient.xml",
+        "lib/net472/Microsoft.AnalysisServices.SPClient.Interfaces.dll",
+        "lib/net472/Microsoft.AnalysisServices.SPClient.Interfaces.xml",
+        "lib/net472/ar/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/bg/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/ca/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/cs/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/da/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/de/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/el/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/es/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/et/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/eu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/fi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/fr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/gl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/he/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/hi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/hr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/hu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/id/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/it/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/ja/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/kk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/ko/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/lt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/lv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/ms/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/nl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/no/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/pl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/pt-PT/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/pt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/ro/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/ru/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/sk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/sl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/sr-Cyrl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/sr-Latn/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/sv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/th/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/tr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/uk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/vi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/zh-Hans/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net472/zh-Hant/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.AdomdClient.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.AdomdClient.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.AdomdClient.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Core.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Core.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Core.xml",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Windows.deps.json",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Windows.dll",
+        "lib/net6.0/Microsoft.AnalysisServices.Runtime.Windows.xml",
+        "lib/net6.0/ar/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ar/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/bg/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/bg/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ca/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ca/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/cs/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/cs/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/da/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/da/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/de/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/de/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/el/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/el/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/es/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/es/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/et/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/et/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/eu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/eu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/fi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/fi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/fr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/fr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/gl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/gl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/he/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/he/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/hi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/hi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/hr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/hr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/hu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/hu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/id/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/id/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/it/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/it/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ja/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ja/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/kk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/kk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ko/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ko/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/lt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/lt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/lv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/lv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ms/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ms/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/nl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/nl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/no/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/no/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/pl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/pl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/pt-PT/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/pt-PT/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/pt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/pt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ro/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ro/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/ru/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/ru/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/sk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/sl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sr-Cyrl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/sr-Cyrl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sr-Latn/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/sr-Latn/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/sv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/sv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/th/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/th/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/tr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/tr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/uk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/uk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/vi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/vi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.AdomdClient.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.AdomdClient.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.AdomdClient.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Core.xml",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.deps.json",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.dll",
+        "lib/net8.0/Microsoft.AnalysisServices.Runtime.Windows.xml",
+        "lib/net8.0/ar/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ar/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/bg/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/bg/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ca/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ca/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/cs/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/cs/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/da/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/da/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/de/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/de/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/el/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/el/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/es/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/es/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/et/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/et/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/eu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/eu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/fi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/fi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/fr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/fr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/gl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/gl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/he/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/he/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/hi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/hi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/hr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/hr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/hu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/hu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/id/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/id/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/it/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/it/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ja/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ja/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/kk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/kk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ko/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ko/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/lt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/lt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/lv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/lv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ms/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ms/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/nl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/nl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/no/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/no/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/pl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/pl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/pt-PT/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/pt-PT/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/pt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/pt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ro/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ro/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/ru/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/ru/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/sk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/sl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/sr-Cyrl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/sr-Latn/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/sv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/sv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/th/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/th/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/tr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/tr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/uk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/uk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/vi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/vi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/zh-Hans/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/net8.0/zh-Hant/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.AdomdClient.deps.json",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.AdomdClient.dll",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.AdomdClient.xml",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.Runtime.Core.deps.json",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.Runtime.Core.dll",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.Runtime.Core.xml",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.Runtime.Windows.deps.json",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.Runtime.Windows.dll",
+        "lib/netcoreapp3.0/Microsoft.AnalysisServices.Runtime.Windows.xml",
+        "lib/netcoreapp3.0/ar/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ar/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/bg/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/bg/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/ca/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ca/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/cs/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/cs/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/da/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/da/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/de/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/de/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/el/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/el/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/es/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/es/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/et/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/et/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/eu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/eu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/fi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/fi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/fr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/fr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/gl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/gl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/he/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/he/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/hi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/hi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/hr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/hr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/hu/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/hu/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/id/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/id/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/it/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/it/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/ja/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ja/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/kk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/kk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/ko/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ko/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/lt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/lt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/lv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/lv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/ms/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ms/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/nl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/nl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/no/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/no/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/pl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/pl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/pt-PT/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/pt-PT/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/pt/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/pt/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/ro/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ro/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/ru/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/ru/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/sk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/sk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/sl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/sl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/sr-Cyrl/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/sr-Cyrl/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/sr-Latn/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/sr-Latn/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/sv/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/sv/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/th/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/th/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/tr/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/tr/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/uk/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/uk/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/vi/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/vi/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/zh-Hans/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/zh-Hans/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "lib/netcoreapp3.0/zh-Hant/Microsoft.AnalysisServices.AdomdClient.resources.dll",
+        "lib/netcoreapp3.0/zh-Hant/Microsoft.AnalysisServices.Runtime.Core.resources.dll",
+        "microsoft.analysisservices.adomdclient.19.84.1.nupkg.sha512",
+        "microsoft.analysisservices.adomdclient.nuspec",
+        "runtimes/win-x64/native/msasxpress.dll"
+      ]
+    },
+    "Microsoft.Identity.Client/4.56.0": {
+      "sha512": "rr4zbidvHy9r4NvOAs5hdd964Ao2A0pAeFBJKR95u1CJAVzbd1p6tPTXUZ+5ld0cfThiVSGvz6UHwY6JjraTpA==",
+      "type": "package",
+      "path": "microsoft.identity.client/4.56.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Microsoft.Identity.Client.dll",
+        "lib/monoandroid10.0/Microsoft.Identity.Client.xml",
+        "lib/monoandroid90/Microsoft.Identity.Client.dll",
+        "lib/monoandroid90/Microsoft.Identity.Client.xml",
+        "lib/net45/Microsoft.Identity.Client.dll",
+        "lib/net45/Microsoft.Identity.Client.xml",
+        "lib/net461/Microsoft.Identity.Client.dll",
+        "lib/net461/Microsoft.Identity.Client.xml",
+        "lib/net6.0-android31.0/Microsoft.Identity.Client.dll",
+        "lib/net6.0-android31.0/Microsoft.Identity.Client.xml",
+        "lib/net6.0-ios15.4/Microsoft.Identity.Client.dll",
+        "lib/net6.0-ios15.4/Microsoft.Identity.Client.xml",
+        "lib/net6.0-windows7.0/Microsoft.Identity.Client.dll",
+        "lib/net6.0-windows7.0/Microsoft.Identity.Client.xml",
+        "lib/net6.0/Microsoft.Identity.Client.dll",
+        "lib/net6.0/Microsoft.Identity.Client.xml",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "lib/netcoreapp2.1/Microsoft.Identity.Client.xml",
+        "lib/netstandard2.0/Microsoft.Identity.Client.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.xml",
+        "lib/uap10.0.17763/Microsoft.Identity.Client.dll",
+        "lib/uap10.0.17763/Microsoft.Identity.Client.pri",
+        "lib/uap10.0.17763/Microsoft.Identity.Client.xml",
+        "lib/xamarinios10/Microsoft.Identity.Client.dll",
+        "lib/xamarinios10/Microsoft.Identity.Client.xml",
+        "microsoft.identity.client.4.56.0.nupkg.sha512",
+        "microsoft.identity.client.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client.Broker/4.56.0": {
+      "sha512": "Dzwo9X3hIgv+wcWZCEnyRuiHQXGvlb05WgKjkxjUScbf0dYQwmeUGwJNf1A4ge68wYNyQ25BZKtMpuhO/pPqRw==",
+      "type": "package",
+      "path": "microsoft.identity.client.broker/4.56.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.Identity.Client.Broker.dll",
+        "lib/net461/Microsoft.Identity.Client.Broker.xml",
+        "lib/netstandard2.0/Microsoft.Identity.Client.Broker.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.Broker.xml",
+        "microsoft.identity.client.broker.4.56.0.nupkg.sha512",
+        "microsoft.identity.client.broker.nuspec"
+      ]
+    },
+    "Microsoft.Identity.Client.NativeInterop/0.13.8": {
+      "sha512": "eccVwaDOan12YJrh6ntIBIXeKTNoWz+af2/c13lhvrDoX0ydVXitCXMJVz0dh2eJK5y2KJ7IfkEvNilB/A9V7A==",
+      "type": "package",
+      "path": "microsoft.identity.client.nativeinterop/0.13.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net461/Microsoft.Identity.Client.NativeInterop.props",
+        "buildtransitive/net461/Microsoft.Identity.Client.NativeInterop.targets",
+        "lib/net461/Microsoft.Identity.Client.NativeInterop.dll",
+        "lib/netstandard2.0/Microsoft.Identity.Client.NativeInterop.dll",
+        "microsoft.identity.client.nativeinterop.0.13.8.nupkg.sha512",
+        "microsoft.identity.client.nativeinterop.nuspec",
+        "runtimes/win-arm64/native/msalruntime_arm64.dll",
+        "runtimes/win-x64/native/msalruntime.dll",
+        "runtimes/win-x86/native/msalruntime_x86.dll"
+      ]
+    },
+    "Microsoft.IdentityModel.Abstractions/6.22.0": {
+      "sha512": "iI+9V+2ciCrbheeLjpmjcqCnhy+r6yCoEcid3nkoFWerHgjVuT6CPM4HODUTtUPe1uwks4wcnAujJ8u+IKogHQ==",
+      "type": "package",
+      "path": "microsoft.identitymodel.abstractions/6.22.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "Microsoft.AnalysisServices.AdomdClient >= 19.81.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj",
+      "projectName": "XmlaBridge",
+      "projectPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj",
+      "packagesPath": "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\SYSADM.DERONB18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "targetAlias": "net48",
+        "dependencies": {
+          "Microsoft.AnalysisServices.AdomdClient": {
+            "target": "Package",
+            "version": "[19.81.2, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "\"XmlaBridge\" ist von \"Microsoft.AnalysisServices.AdomdClient (>= 19.81.2)\" abhängig, \"Microsoft.AnalysisServices.AdomdClient 19.81.2\" wurde jedoch nicht gefunden. Die ungefähre höchste Übereinstimmung von \"Microsoft.AnalysisServices.AdomdClient 19.84.1\" wurde aufgelöst.",
+      "libraryId": "Microsoft.AnalysisServices.AdomdClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    }
+  ]
+}

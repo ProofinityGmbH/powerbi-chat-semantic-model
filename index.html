@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Chat - Semantic Model Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 Power BI Chat - Semantic Model Assistant</h1>
+            <button id="infoButton" class="info-button" title="About & Support">ℹ️</button>
+        </div>
+        <div class="connection-info">
+            <div class="connection-item">
+                <strong>Server:</strong> <span id="serverInfo">Not connected</span>
+            </div>
+            <div class="connection-item">
+                <strong>Database:</strong> <span id="databaseInfo">N/A</span>
+            </div>
+            <span id="statusBadge" class="status disconnected">Disconnected</span>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>ℹ️ About Power BI Chat</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">
+                    AI-powered semantic model assistant that provides full access to your Power BI data model.
+                </p>
+
+                <div class="modal-section">
+                    <h3>📦 Open Source</h3>
+                    <p>This tool is open source and available on GitHub:</p>
+                    <a href="https://github.com/markusbegerow/powerbi-chat-semantic-model" class="modal-link" id="githubLink">
+                        <span class="link-icon">🔗</span>
+                        <span>View on GitHub</span>
+                    </a>
+                </div>
+
+                <div class="modal-section">
+                    <h3>☕ Support Development</h3>
+                    <p>If you find this tool helpful, consider supporting its development:</p>
+                    <a href="https://paypal.me/MarkusBegerow?country.x=DE&locale.x=de_DE" class="modal-link modal-link-primary" id="donateLink">
+                        <span class="link-icon">💝</span>
+                        <span>Buy Me a Coffee</span>
+                    </a>
+                </div>
+
+                <div class="modal-footer">
+                    <p class="modal-version">Version 1.0.0 | Made with ❤️ by Markus Begerow</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>📊 Semantic Model</h3>
+            </div>
+
+            <div class="settings-panel">
+                <h4>⚙️ Settings</h4>
+                <div class="settings-row">
+                    <label for="apiUrl">API URL</label>
+                    <input type="text" id="apiUrl" placeholder="https://api.openai.com/v1/chat/completions">
+                </div>
+                <div class="settings-row">
+                    <label for="apiToken">API Token</label>
+                    <input type="password" id="apiToken" placeholder="Your API token">
+                </div>
+                <div class="settings-row">
+                    <label for="modelName">Model Name</label>
+                    <input type="text" id="modelName" placeholder="gpt-4" value="gpt-4">
+                </div>
+            </div>
+
+            <div class="metadata-container" id="metadataContainer">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📭</div>
+                    <p>Loading metadata...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="empty-state">
+                    <div class="empty-state-icon">💬</div>
+                    <p>Ask me anything about the semantic model!</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-container">
+                    <input type="text" id="chatInput" placeholder="Ask about tables, measures, relationships... (Type 'DAX: your query' to execute DAX)">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="dax-validator.js"></script>
+    <script src="xmla-connection.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>

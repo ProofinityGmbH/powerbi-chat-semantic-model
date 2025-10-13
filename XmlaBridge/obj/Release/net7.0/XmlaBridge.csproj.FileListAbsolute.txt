@@ -1,0 +1,12 @@
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.csproj.AssemblyReference.cache
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.AssemblyInfoInputs.cache
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.AssemblyInfo.cs
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.csproj.CoreCompileInputs.cache
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\bin\Release\net7.0\XmlaBridge.deps.json
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\bin\Release\net7.0\XmlaBridge.dll
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\bin\Release\net7.0\XmlaBridge.pdb
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.dll
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\refint\XmlaBridge.dll
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\XmlaBridge.pdb
+C:\Users\SYSADM.DERONB18\Desktop\PowerBI-roosi\RoosiExternalTool\XmlaBridge\obj\Release\net7.0\ref\XmlaBridge.dll

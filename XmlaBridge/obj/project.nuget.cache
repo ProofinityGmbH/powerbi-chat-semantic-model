@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "yobY5cf/iZ5ubTlqsANaMCl5lvrHVtrrn4uk4is+VHPmJFMyXlHCLvj2iT7J33GW3XkNn7mYMCbZ9anDmPSnIw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.analysisservices.adomdclient\\19.84.1\\microsoft.analysisservices.adomdclient.19.84.1.nupkg.sha512",
+    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identity.client\\4.56.0\\microsoft.identity.client.4.56.0.nupkg.sha512",
+    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identity.client.broker\\4.56.0\\microsoft.identity.client.broker.4.56.0.nupkg.sha512",
+    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identity.client.nativeinterop\\0.13.8\\microsoft.identity.client.nativeinterop.0.13.8.nupkg.sha512",
+    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.22.0\\microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "\"XmlaBridge\" ist von \"Microsoft.AnalysisServices.AdomdClient (>= 19.81.2)\" abhängig, \"Microsoft.AnalysisServices.AdomdClient 19.81.2\" wurde jedoch nicht gefunden. Die ungefähre höchste Übereinstimmung von \"Microsoft.AnalysisServices.AdomdClient 19.84.1\" wurde aufgelöst.",
+      "libraryId": "Microsoft.AnalysisServices.AdomdClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    }
+  ]
+}

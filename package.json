@@ -1,0 +1,19 @@
+{
+  "name": "powerbi-chat",
+  "version": "1.0.0",
+  "description": "Power BI Chat - Power BI Semantic Model Assistant",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "set NODE_ENV=development && electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["powerbi", "external-tool", "semantic-model", "chat", "ai"],
+  "author": "Power BI Chat Team",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^38.2.2",
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-edge-js": "^38.0.0"
+  }
+}

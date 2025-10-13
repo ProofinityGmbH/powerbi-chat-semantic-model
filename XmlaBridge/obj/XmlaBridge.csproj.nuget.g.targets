@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.identity.client.nativeinterop\0.13.8\buildtransitive\net461\Microsoft.Identity.Client.NativeInterop.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.identity.client.nativeinterop\0.13.8\buildtransitive\net461\Microsoft.Identity.Client.NativeInterop.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.analysisservices.adomdclient\19.84.1\build\net472\Microsoft.AnalysisServices.AdomdClient.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.analysisservices.adomdclient\19.84.1\build\net472\Microsoft.AnalysisServices.AdomdClient.targets')" />
+  </ImportGroup>
+</Project>
