@@ -4,10 +4,33 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
     <Nullable>disable</Nullable>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AnalysisServices.AdomdClient" Version="19.81.2" />
+    <PackageReference Include="System.Text.Json" Version="9.0.10" />
+    <PackageReference Include="Whisper.net" Version="1.7.3" />
+    <PackageReference Include="Whisper.net.Runtime" Version="1.7.3" />
+    <PackageReference Include="Xabe.FFmpeg" Version="6.0.2" />
+    <PackageReference Include="Xabe.FFmpeg.Downloader" Version="6.0.2" />
   </ItemGroup>
+
+  <!-- Copy native Whisper DLLs and VC++ Runtime to output directory after build -->
+  <Target Name="CopyNativeDlls" AfterTargets="Build">
+    <ItemGroup>
+      <!-- Whisper.net native DLLs are in runtimes\win-x64 -->
+      <NativeDlls Include="$(OutputPath)runtimes\win-x64\ggml-whisper.dll" />
+      <NativeDlls Include="$(OutputPath)runtimes\win-x64\whisper.dll" />
+      <!-- Other native DLLs in runtimes\win-x64\native -->
+      <NativeDlls Include="$(OutputPath)runtimes\win-x64\native\*.dll" />
+      <!-- VC++ Runtime DLLs from electron-edge-js (copy from node_modules if building from main project) -->
+      <VCRuntimeDlls Include="..\node_modules\electron-edge-js\lib\native\win32\x64\38\*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(NativeDlls)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(VCRuntimeDlls)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" Condition="Exists('..\node_modules\electron-edge-js\lib\native\win32\x64\38\')" />
+    <Message Text="Copied native DLLs: @(NativeDlls -> '%(Filename)%(Extension)')" Importance="high" />
+    <Message Text="Copied VC++ Runtime DLLs: @(VCRuntimeDlls -> '%(Filename)%(Extension)')" Importance="high" Condition="Exists('..\node_modules\electron-edge-js\lib\native\win32\x64\38\')" />
+  </Target>
 
 </Project>

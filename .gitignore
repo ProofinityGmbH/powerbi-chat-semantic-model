@@ -9,6 +9,12 @@ out/
 # Electron build outputs
 XmlaBridge-Published/
 
+# C# build outputs
+XmlaBridge/bin/
+XmlaBridge/obj/
+*.dll
+*.pdb
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -33,3 +39,9 @@ npm-debug.log*
 # Temporary files
 *.tmp
 temp/
+
+# Development .pbitool files (generated during build/dev)
+PowerBIChat.pbitool.json
+
+# Generated icon files
+icon.ico

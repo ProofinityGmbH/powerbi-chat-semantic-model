@@ -1,19 +1,89 @@
 {
   "name": "powerbi-chat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Power BI Chat - Power BI Semantic Model Assistant",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "dev": "set NODE_ENV=development && electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild": "electron-rebuild -f -w electron-edge-js",
+    "postinstall": "electron-rebuild -f -w electron-edge-js",
+    "build": "electron-builder --win --x64",
+    "build:dir": "electron-builder --win --x64 --dir"
   },
-  "keywords": ["powerbi", "external-tool", "semantic-model", "chat", "ai"],
-  "author": "Power BI Chat Team",
+  "keywords": [
+    "powerbi",
+    "external-tool",
+    "semantic-model",
+    "chat",
+    "ai"
+  ],
+  "author": "Markus Begerow",
   "license": "ISC",
   "dependencies": {
+    "electron-edge-js": "^38.0.0",
+    "electron-squirrel-startup": "^1.0.1"
+  },
+  "devDependencies": {
     "electron": "^38.2.2",
-    "electron-squirrel-startup": "^1.0.1",
-    "electron-edge-js": "^38.0.0"
+    "electron-builder": "^26.0.12",
+    "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "appId": "com.powerbi.chat",
+    "productName": "Power BI Chat",
+    "nodeGypRebuild": false,
+    "npmRebuild": true,
+    "buildDependenciesFromSource": false,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!**/*.md",
+      "!**/*.py",
+      "!XmlaBridge/**/*",
+      "!XmlaBridge-Published/**/*",
+      "XmlaBridge/bin/Release/net48/**/*",
+      "!dist/**/*",
+      "!.git/**/*",
+      "!build/**/*"
+    ],
+    "asarUnpack": [
+      "node_modules/electron-edge-js/**/*",
+      "node_modules/edge-cs/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "XmlaBridge/bin/Release/net48",
+        "to": "XmlaBridge/bin/Release/net48",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "vc_redist.x64.exe",
+        "to": "vc_redist.x64.exe"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Power BI Chat",
+      "perMachine": true,
+      "allowElevation": true,
+      "include": "installer.nsh",
+      "license": "LICENSE"
+    }
   }
 }

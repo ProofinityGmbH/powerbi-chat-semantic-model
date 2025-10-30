@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj": {}
+    "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj": {
+    "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj",
+        "projectUniqueName": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
         "projectName": "XmlaBridge",
-        "projectPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\XmlaBridge.csproj",
+        "projectPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
         "packagesPath": "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\RoosiExternalTool\\XmlaBridge\\obj\\",
+        "outputPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SYSADM.DERONB18\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,26 @@
             "Microsoft.AnalysisServices.AdomdClient": {
               "target": "Package",
               "version": "[19.81.2, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Whisper.net": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
+            "Whisper.net.Runtime": {
+              "target": "Package",
+              "version": "[1.7.3, )"
+            },
+            "Xabe.FFmpeg": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Xabe.FFmpeg.Downloader": {
+              "target": "Package",
+              "version": "[6.0.2, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"

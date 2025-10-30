@@ -1,6 +1,76 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, session } = require('electron');
 const path = require('path');
 const fs = require('fs');
+
+// Add native library paths to PATH before requiring electron-edge-js
+// This ensures all native DLLs (VC++ runtime, Whisper, etc.) can be found
+if (process.platform === 'win32') {
+  const electronVersion = process.versions.electron.split('.')[0];
+  const arch = process.arch;
+
+  // In development: __dirname points to project root
+  // In production (asar): __dirname points to app.asar, but unpacked files are in app.asar.unpacked
+  // In production (resources): __dirname might point to resources/app.asar
+  let basePath = __dirname;
+  if (__dirname.includes('.asar')) {
+    basePath = __dirname.replace('app.asar', 'app.asar.unpacked');
+  }
+
+  // Get resources path for extraResources (XmlaBridge DLLs)
+  const resourcesPath = app.isPackaged ? process.resourcesPath : __dirname;
+
+  const pathsToAdd = [];
+
+  // 1. electron-edge-js native DLLs (VC++ runtime, edge_nativeclr.node)
+  const edgeNativePath = path.join(basePath, 'node_modules', 'electron-edge-js', 'lib', 'native', 'win32', arch, electronVersion);
+  if (fs.existsSync(edgeNativePath)) {
+    pathsToAdd.push(edgeNativePath);
+    const dlls = fs.readdirSync(edgeNativePath).filter(f => f.endsWith('.dll') || f.endsWith('.node'));
+    console.log('[Setup] ✓ Found electron-edge-js native files:', dlls.join(', '));
+  } else {
+    console.error('[Setup] ✗ electron-edge-js native path not found:', edgeNativePath);
+  }
+
+  // 2. Whisper native DLLs (ggml-whisper.dll, whisper.dll) - in runtimes/win-x64
+  const whisperNativePath = path.join(resourcesPath, 'XmlaBridge', 'bin', 'Release', 'net48', 'runtimes', 'win-x64');
+  if (fs.existsSync(whisperNativePath)) {
+    pathsToAdd.push(whisperNativePath);
+    const dlls = fs.readdirSync(whisperNativePath).filter(f => f.endsWith('.dll'));
+    console.log('[Setup] ✓ Found Whisper native DLLs in runtimes/win-x64:', dlls.join(', '));
+  } else {
+    console.error('[Setup] ✗ Whisper native path not found:', whisperNativePath);
+  }
+
+  // 2b. Additional native DLLs in runtimes/win-x64/native (e.g., msalruntime.dll)
+  const whisperNativePath2 = path.join(resourcesPath, 'XmlaBridge', 'bin', 'Release', 'net48', 'runtimes', 'win-x64', 'native');
+  if (fs.existsSync(whisperNativePath2)) {
+    pathsToAdd.push(whisperNativePath2);
+    const dlls = fs.readdirSync(whisperNativePath2).filter(f => f.endsWith('.dll'));
+    console.log('[Setup] ✓ Found additional native DLLs:', dlls.join(', '));
+  } else {
+    console.error('[Setup] ✗ Additional native path not found:', whisperNativePath2);
+  }
+
+  // 3. XmlaBridge main directory (all .NET DLLs)
+  const xmlaBridgePath = path.join(resourcesPath, 'XmlaBridge', 'bin', 'Release', 'net48');
+  if (fs.existsSync(xmlaBridgePath)) {
+    pathsToAdd.push(xmlaBridgePath);
+    const dlls = fs.readdirSync(xmlaBridgePath).filter(f => f.endsWith('.dll') && !fs.statSync(path.join(xmlaBridgePath, f)).isDirectory());
+    console.log('[Setup] ✓ Found XmlaBridge DLLs:', dlls.length, 'files');
+  } else {
+    console.error('[Setup] ✗ XmlaBridge path not found:', xmlaBridgePath);
+  }
+
+  // Add all paths to PATH environment variable
+  if (pathsToAdd.length > 0) {
+    const currentPath = process.env.PATH || '';
+    process.env.PATH = pathsToAdd.join(path.delimiter) + path.delimiter + currentPath;
+    console.log('[Setup] ✓ Added', pathsToAdd.length, 'native library paths to PATH');
+  } else {
+    console.error('[Setup] ✗ No native library paths found!');
+  }
+}
+
 const edge = require('electron-edge-js');
 const CONFIG = require('./config');
 const { escapeXml, unescapeXml } = require('./utils');
@@ -93,6 +163,35 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  // Configure CSP to allow Web Speech API and microphone access
+  // Allow any HTTPS connection to support custom API endpoints
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    callback({
+      responseHeaders: {
+        ...details.responseHeaders,
+        'Content-Security-Policy': [
+          "default-src 'self'; " +
+          "script-src 'self' 'unsafe-inline'; " +
+          "style-src 'self' 'unsafe-inline'; " +
+          "connect-src 'self' https: http://localhost:* ws://localhost:* http://127.0.0.1:* ws://127.0.0.1:* wss://localhost:* wss://127.0.0.1:*; " +
+          "media-src 'self' blob: mediastream:; " +
+          "img-src 'self' data: blob:;"
+        ]
+      }
+    });
+  });
+
+  // Grant permissions for microphone and media devices
+  session.defaultSession.setPermissionRequestHandler((webContents, permission, callback) => {
+    if (permission === 'media' || permission === 'microphone' || permission === 'audioCapture') {
+      console.log('[Permissions] Granted:', permission);
+      callback(true);
+    } else {
+      console.log('[Permissions] Denied:', permission);
+      callback(false);
+    }
+  });
+
   createWindow();
 
   app.on('activate', () => {
@@ -124,6 +223,21 @@ ipcMain.handle('open-external', async (event, url) => {
 
 // Load .NET ADOMD.NET bridge
 let xmlaBridge = null;
+let whisperBridge = null;
+
+/**
+ * Gets the correct base path for .NET DLL based on whether app is packaged
+ * @returns {string} Base path for resources
+ */
+function getBasePath() {
+  if (app.isPackaged) {
+    // In production, DLLs are in resources folder (extraResources)
+    return process.resourcesPath;
+  } else {
+    // In development, use __dirname
+    return __dirname;
+  }
+}
 
 /**
  * Loads the .NET bridge for ADOMD.NET queries
@@ -135,7 +249,10 @@ function loadXmlaBridge() {
   if (xmlaBridge) return xmlaBridge;
 
   try {
-    const bridgePath = path.join(__dirname, ...CONFIG.BRIDGE.PATH);
+    const basePath = getBasePath();
+    const bridgePath = path.join(basePath, ...CONFIG.BRIDGE.PATH);
+    console.log('[.NET Bridge] App packaged:', app.isPackaged);
+    console.log('[.NET Bridge] Base path:', basePath);
     console.log('[.NET Bridge] Loading from:', bridgePath);
 
     // Check if the DLL exists
@@ -200,6 +317,39 @@ Try rebuilding:
       throw new Error(detailedError);
     }
 
+    throw error;
+  }
+}
+
+/**
+ * Loads the .NET bridge for Whisper speech-to-text
+ * @returns {Function} The loaded bridge function
+ * @throws {Error} If the bridge DLL cannot be loaded
+ */
+function loadWhisperBridge() {
+  if (whisperBridge) return whisperBridge;
+
+  try {
+    const basePath = getBasePath();
+    const bridgePath = path.join(basePath, ...CONFIG.BRIDGE.PATH);
+    console.log('[Whisper Bridge] App packaged:', app.isPackaged);
+    console.log('[Whisper Bridge] Base path:', basePath);
+    console.log('[Whisper Bridge] Loading from:', bridgePath);
+
+    if (!fs.existsSync(bridgePath)) {
+      throw new Error('Whisper Bridge DLL not found. Please build the XmlaBridge project first.');
+    }
+
+    whisperBridge = edge.func({
+      assemblyFile: bridgePath,
+      typeName: 'WhisperBridge',
+      methodName: 'Invoke'
+    });
+    console.log('[Whisper Bridge] Loaded successfully');
+
+    return whisperBridge;
+  } catch (error) {
+    console.error('[Whisper Bridge] Failed to load:', error.message);
     throw error;
   }
 }
@@ -292,6 +442,80 @@ ipcMain.handle('xmla-request', async (event, { endpoint, soapBody }) => {
       throw new Error(`Invalid XMLA endpoint URL. Make sure Power BI Desktop is running and the report is open.`);
     }
 
+    throw error;
+  }
+});
+
+// IPC Handler for Whisper speech-to-text transcription
+ipcMain.handle('whisper-transcribe', async (event, { audioData }) => {
+  try {
+    console.log('[Whisper] Transcription request received');
+    console.log('[Whisper] Audio data length:', audioData?.length || 0);
+
+    // Load the Whisper bridge
+    let bridge;
+    try {
+      bridge = loadWhisperBridge();
+    } catch (bridgeError) {
+      console.error('[Whisper] Bridge load error:', bridgeError);
+      throw new Error(`Failed to load Whisper Bridge: ${bridgeError.message}`);
+    }
+
+    // Call the .NET function
+    console.log('[Whisper] About to call bridge...');
+    const result = await new Promise((resolve, reject) => {
+      try {
+        bridge({
+          audioData: audioData
+        }, (error, result) => {
+          console.log('[Whisper] Bridge callback received');
+
+          if (error) {
+            console.error('[Whisper] Bridge callback ERROR');
+            console.error('[Whisper] Bridge error:', error);
+            console.error('[Whisper] Bridge error type:', typeof error, error.constructor?.name);
+            console.error('[Whisper] Bridge error string:', String(error));
+            console.error('[Whisper] Bridge error JSON:', JSON.stringify(error, null, 2));
+
+            // Extract more details from the error
+            if (error.InnerException) {
+              console.error('[Whisper] Inner exception:', error.InnerException);
+            }
+            if (error.Message) {
+              console.error('[Whisper] Error message:', error.Message);
+            }
+            if (error.message) {
+              console.error('[Whisper] error.message:', error.message);
+            }
+
+            reject(error);
+          } else {
+            console.log('[Whisper] Bridge callback SUCCESS');
+            console.log('[Whisper] Result:', JSON.stringify(result, null, 2));
+            resolve(result);
+          }
+        });
+      } catch (syncError) {
+        console.error('[Whisper] Synchronous error calling bridge:', syncError);
+        reject(syncError);
+      }
+    });
+
+    if (result.success) {
+      console.log('[Whisper] Transcription successful:', result.text);
+      return { success: true, text: result.text };
+    } else {
+      console.error('[Whisper] Transcription failed:', result.error);
+      console.error('[Whisper] Error type:', result.errorType);
+      console.error('[Whisper] Error details:', result.details);
+
+      // Return the detailed error to the renderer
+      throw new Error(result.error || 'Unknown transcription error');
+    }
+
+  } catch (error) {
+    console.error('[Whisper] Request error:', error.message);
+    console.error('[Whisper] Full error:', error);
     throw error;
   }
 });

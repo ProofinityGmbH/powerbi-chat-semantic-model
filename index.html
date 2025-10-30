@@ -80,6 +80,12 @@
                     <label for="modelName">Model Name</label>
                     <input type="text" id="modelName" placeholder="gpt-4" value="gpt-4">
                 </div>
+                <div class="settings-row">
+                    <label>Speech-to-Text</label>
+                    <div style="padding: 8px 0; color: #666;">
+                        Whisper.NET (Local, Offline) ✓
+                    </div>
+                </div>
             </div>
 
             <div class="metadata-container" id="metadataContainer">
@@ -101,6 +107,7 @@
             <div class="chat-input-area">
                 <div class="input-container">
                     <input type="text" id="chatInput" placeholder="Ask about tables, measures, relationships... (Type 'DAX: your query' to execute DAX)">
+                    <button id="micButton" class="mic-button" title="Click to speak">🎤</button>
                     <button id="sendButton">Send</button>
                 </div>
             </div>

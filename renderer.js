@@ -363,6 +363,169 @@ document.getElementById('chatInput').addEventListener('keypress', (e) => {
     document.getElementById(id).addEventListener('change', saveSettings);
 });
 
+// Speech-to-text functionality (Whisper.NET only)
+let isRecording = false;
+
+/**
+ * Transcribe audio using Whisper.NET via Electron IPC
+ * @param {Blob} audioBlob - The recorded audio blob
+ * @returns {Promise<string>} The transcribed text
+ */
+async function transcribeWithWhisper(audioBlob) {
+    try {
+        console.log('[Whisper] Converting audio blob to base64...');
+
+        // Convert blob to ArrayBuffer
+        const arrayBuffer = await audioBlob.arrayBuffer();
+
+        // Convert ArrayBuffer to base64
+        const bytes = new Uint8Array(arrayBuffer);
+        let binary = '';
+        for (let i = 0; i < bytes.byteLength; i++) {
+            binary += String.fromCharCode(bytes[i]);
+        }
+        const base64Audio = btoa(binary);
+
+        console.log('[Whisper] Sending audio to C# bridge...');
+
+        // Call the Electron IPC handler
+        const result = await window.electronAPI.whisperTranscribe(base64Audio);
+
+        if (result.success) {
+            console.log('[Whisper] Transcription successful:', result.text);
+            return result.text || '';
+        } else {
+            throw new Error(result.error || 'Transcription failed');
+        }
+    } catch (error) {
+        console.error('[Whisper] Transcription error:', error);
+        throw new Error(`Failed to transcribe audio: ${error.message}`);
+    }
+}
+
+/**
+ * Record audio using MediaRecorder and return a blob
+ * @returns {Promise<Blob>} The recorded audio blob
+ */
+async function recordAudio() {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const mediaRecorder = new MediaRecorder(stream);
+            const audioChunks = [];
+
+            mediaRecorder.ondataavailable = (event) => {
+                audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                stream.getTracks().forEach(track => track.stop());
+                resolve(audioBlob);
+            };
+
+            mediaRecorder.onerror = (error) => {
+                stream.getTracks().forEach(track => track.stop());
+                reject(error);
+            };
+
+            // Store recorder in global scope so we can stop it
+            window.currentRecorder = mediaRecorder;
+            mediaRecorder.start();
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+// Microphone button click handler (Whisper.NET only)
+document.getElementById('micButton').addEventListener('click', async () => {
+    const micButton = document.getElementById('micButton');
+
+    if (isRecording) {
+        // Stop recording and transcribe
+        isRecording = false;
+        micButton.classList.remove('recording');
+        micButton.disabled = true;
+        micButton.textContent = '⏳';
+
+        try {
+            if (window.currentRecorder) {
+                window.currentRecorder.stop();
+
+                // Wait for the recording to finish
+                window.currentRecorder.onstop = async () => {
+                    try {
+                        // Get the recorded data
+                        const audioBlob = new Blob(window.recordedChunks, { type: 'audio/webm' });
+
+                        console.log('[Microphone] Audio blob created, size:', audioBlob.size);
+
+                        // Transcribe using Whisper.NET
+                        const text = await transcribeWithWhisper(audioBlob);
+
+                        // Set the text in the input
+                        const chatInput = document.getElementById('chatInput');
+                        chatInput.value = text;
+
+                        // Auto-send after transcription
+                        if (text && text.trim().length > 0) {
+                            sendMessage();
+                        } else {
+                            chatInput.focus();
+                        }
+                    } catch (error) {
+                        console.error('Transcription error:', error);
+                        addMessage('error', error.message);
+                    } finally {
+                        // Stop all tracks to release microphone
+                        if (window.currentRecorder && window.currentRecorder.stream) {
+                            window.currentRecorder.stream.getTracks().forEach(track => track.stop());
+                        }
+                        micButton.disabled = false;
+                        micButton.textContent = '🎤';
+                    }
+                };
+            }
+        } catch (error) {
+            console.error('Failed to stop recording:', error);
+            addMessage('error', 'Failed to process recording. Please try again.');
+            micButton.disabled = false;
+            micButton.textContent = '🎤';
+        }
+    } else {
+        // Start recording
+        try {
+            isRecording = true;
+            micButton.classList.add('recording');
+
+            const stream = await navigator.mediaDevices.getUserMedia({
+                audio: {
+                    channelCount: 1,
+                    sampleRate: 16000
+                }
+            });
+
+            window.currentRecorder = new MediaRecorder(stream);
+            window.recordedChunks = [];
+
+            window.currentRecorder.ondataavailable = (event) => {
+                if (event.data.size > 0) {
+                    window.recordedChunks.push(event.data);
+                }
+            };
+
+            window.currentRecorder.start();
+            console.log('[Microphone] Recording started');
+        } catch (error) {
+            console.error('Failed to start recording:', error);
+            addMessage('error', 'Failed to access microphone. Please allow microphone permissions.');
+            isRecording = false;
+            micButton.classList.remove('recording');
+        }
+    }
+});
+
 /**
  * Executes a DAX query against the semantic model
  * @param {string} daxQuery - The DAX query to execute

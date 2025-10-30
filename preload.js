@@ -5,6 +5,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('electronAPI', {
   onConnectionInfo: (callback) => ipcRenderer.on('connection-info', callback),
   xmlaRequest: (endpoint, soapBody) => ipcRenderer.invoke('xmla-request', { endpoint, soapBody }),
+  whisperTranscribe: (audioData) => ipcRenderer.invoke('whisper-transcribe', { audioData }),
   onMainLog: (callback) => ipcRenderer.on('main-log', callback),
   openExternal: async (url) => {
     console.log('[Preload] openExternal called with URL:', url);
