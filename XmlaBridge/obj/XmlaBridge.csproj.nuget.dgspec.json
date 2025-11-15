@@ -1,29 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj": {}
+    "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj": {
+    "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+        "projectUniqueName": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
         "projectName": "XmlaBridge",
-        "projectPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
-        "packagesPath": "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\obj\\",
+        "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+        "packagesPath": "C:\\Users\\Proofinity\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SYSADM.DERONB18\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Proofinity\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net48"
         ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net48": {
             "targetAlias": "net48",
@@ -34,7 +29,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net48": {
@@ -43,6 +44,12 @@
             "Microsoft.AnalysisServices.AdomdClient": {
               "target": "Package",
               "version": "[19.81.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
             },
             "System.Text.Json": {
               "target": "Package",
@@ -65,7 +72,7 @@
               "version": "[6.0.2, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

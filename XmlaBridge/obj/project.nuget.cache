@@ -1,44 +1,83 @@
 {
   "version": 2,
-  "dgSpecHash": "B4P2l7jpEYVjHmvEEj7QKn0JB65sEsvRMkzxh3vw/HMvGIuRaKGLcXNVHdFPfCI5NPkPSVJ7F7MZvN0dPhPVKg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\SYSADM.DERONB18\\Desktop\\PowerBI-roosi\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.analysisservices.adomdclient\\19.84.1\\microsoft.analysisservices.adomdclient.19.84.1.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.10\\microsoft.bcl.asyncinterfaces.9.0.10.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identity.client\\4.56.0\\microsoft.identity.client.4.56.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identity.client.broker\\4.56.0\\microsoft.identity.client.broker.4.56.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identity.client.nativeinterop\\0.13.8\\microsoft.identity.client.nativeinterop.0.13.8.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.22.0\\microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.io.compression\\4.3.0\\system.io.compression.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.io.pipelines\\9.0.10\\system.io.pipelines.9.0.10.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.memory\\4.6.0\\system.memory.4.6.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.net.http\\4.3.4\\system.net.http.4.3.4.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.numerics.vectors\\4.6.0\\system.numerics.vectors.4.6.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.1.0\\system.runtime.compilerservices.unsafe.6.1.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.security.cryptography.encoding\\4.3.0\\system.security.cryptography.encoding.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.3.0\\system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.text.encodings.web\\9.0.10\\system.text.encodings.web.9.0.10.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.text.json\\9.0.10\\system.text.json.9.0.10.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\whisper.net\\1.7.3\\whisper.net.1.7.3.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\whisper.net.runtime\\1.7.3\\whisper.net.runtime.1.7.3.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\xabe.ffmpeg\\6.0.2\\xabe.ffmpeg.6.0.2.nupkg.sha512",
-    "C:\\Users\\SYSADM.DERONB18\\.nuget\\packages\\xabe.ffmpeg.downloader\\6.0.2\\xabe.ffmpeg.downloader.6.0.2.nupkg.sha512"
-  ],
+  "dgSpecHash": "wNYBRVKh6l0=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+  "expectedPackageFiles": [],
   "logs": [
     {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "\"XmlaBridge\" ist von \"Microsoft.AnalysisServices.AdomdClient (>= 19.81.2)\" abhängig, \"Microsoft.AnalysisServices.AdomdClient 19.81.2\" wurde jedoch nicht gefunden. Die ungefähre höchste Übereinstimmung von \"Microsoft.AnalysisServices.AdomdClient 19.84.1\" wurde aufgelöst.",
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"Microsoft.AnalysisServices.AdomdClient (>= 19.81.2)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
       "libraryId": "Microsoft.AnalysisServices.AdomdClient",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"System.Text.Json (>= 9.0.10)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"Whisper.net (>= 1.7.3)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "libraryId": "Whisper.net",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"Whisper.net.Runtime (>= 1.7.3)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "libraryId": "Whisper.net.Runtime",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"Xabe.FFmpeg (>= 6.0.2)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "libraryId": "Xabe.FFmpeg",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"Xabe.FFmpeg.Downloader (>= 6.0.2)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "libraryId": "Xabe.FFmpeg.Downloader",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "\"Microsoft.NETFramework.ReferenceAssemblies (>= 1.0.3)\" kann für \".NETFramework,Version=v4.8\" nicht aufgelöst werden.",
+      "projectPath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "filePath": "C:\\Users\\Proofinity\\Documents\\GitHub\\Power BI Chat - Semantic Model Assistant\\powerbi-chat-semantic-model\\XmlaBridge\\XmlaBridge.csproj",
+      "libraryId": "Microsoft.NETFramework.ReferenceAssemblies",
       "targetGraphs": [
         ".NETFramework,Version=v4.8"
       ]
