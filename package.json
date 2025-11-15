@@ -58,7 +58,9 @@
       {
         "from": "XmlaBridge/bin/Release/net48",
         "to": "XmlaBridge/bin/Release/net48",
-        "filter": ["**/*"]
+        "filter": [
+          "**/*"
+        ]
       },
       {
         "from": "vc_redist.x64.exe",
@@ -69,7 +71,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "signAndEditExecutable": false

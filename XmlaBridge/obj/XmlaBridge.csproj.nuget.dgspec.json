@@ -19,6 +19,9 @@
         "originalTargetFrameworks": [
           "net48"
         ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
         "frameworks": {
           "net48": {
             "targetAlias": "net48",
@@ -44,12 +47,6 @@
             "Microsoft.AnalysisServices.AdomdClient": {
               "target": "Package",
               "version": "[19.81.2, )"
-            },
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.0.3, )",
-              "autoReferenced": true
             },
             "System.Text.Json": {
               "target": "Package",
